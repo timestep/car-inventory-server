@@ -14,7 +14,7 @@ app.use(function(req, res, next) {
 app.get('/', function (req, response) {
   isomorphicFetch(carJson)
     .then(res => res.json())
-    .then(json => response.json(json));
+    .then(json => response.send(json));
 })
 
 app.listen(1337, () => {
